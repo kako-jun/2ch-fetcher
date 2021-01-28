@@ -1,6 +1,4 @@
 # 2ch-fetcher-with-proxy
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FNarazaka%2F2ch-fetcher.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FNarazaka%2F2ch-fetcher?ref=badge_shield)
-
 
 a fork of [2ch fetcher](https://github.com/Narazaka/2ch-fetcher).
 
@@ -42,6 +40,3 @@ hierarchal().then(single);
 ## License
 
 This is released under [MIT License](https://narazaka.net/license/MIT?2017)
-
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FNarazaka%2F2ch-fetcher.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FNarazaka%2F2ch-fetcher?ref=badge_large)
