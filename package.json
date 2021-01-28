@@ -8,7 +8,7 @@
     "lib"
   ],
   "scripts": {
-    "prepublish": "npm run dist",
+    "prepare": "npm run dist",
     "dist": "rimraf lib && tsc",
     "lint": "tslint -p ."
   },
