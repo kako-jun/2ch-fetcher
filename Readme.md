@@ -1,19 +1,19 @@
-# 2ch-fetcher
+# 2ch-fetcher-with-proxy
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FNarazaka%2F2ch-fetcher.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FNarazaka%2F2ch-fetcher?ref=badge_shield)
 
 
-2ch fetcher
+a fork of [2ch fetcher](https://github.com/Narazaka/2ch-fetcher).
 
 ## Install
 
 ```bash
-npm install 2ch-fetcher
+npm install 2ch-fetcher-with-proxy
 ```
 
 ## Usage
 
 ```typescript
-import { BBSMenu, Thread } from "2ch-fetcher";
+import { BBSMenu, Thread } from "2ch-fetcher-with-proxy";
 
 async function hierarchal() {
     const menu = new BBSMenu(); // default url is bbsmenu of 2ch.sc
