@@ -13,27 +13,27 @@ npm install 2ch-fetcher
 ## Usage
 
 ```typescript
-import { BBSMenu, Thread } from "./";
+import { BBSMenu, Thread } from "2ch-fetcher";
 
 async function hierarchal() {
     const menu = new BBSMenu(); // default url is bbsmenu of 2ch.sc
     const boards = await menu.fetchBoards();
     console.log(boards.names);
-    const threads = await boards.board("河川・ダム等").fetchThreads();
+    const threads = await boards.name("河川・ダム等").fetchThreads();
     console.log(threads.titles);
-    console.log(threads.searchThreads(/なんとか/).map((thread) => thread.title));
-    const posts = await threads.thread("なんとかスレ").fetchPosts();
-    const post = posts.post(1); // 1 origin
+    console.log(threads.searchByTitle(/なんとか/).map((thread) => thread.title));
+    const posts = await threads.title("なんとかスレ").fetchPosts();
+    const post = posts.index(1); // 1 origin
     if (post) { // あぼーん post is undefined
         console.log(post.name);
     }
-    console.log(posts.range(1, 2));
+    console.log(posts.indexRange(1, 2));
 }
 
 async function single() {
     const thread = new Thread("http://example.com/foobar/dat/123456789.dat", "title", 42);
     const posts = await thread.fetchPosts();
-    console.log(posts.post(1));
+    console.log(posts.index(1));
 }
 
 hierarchal().then(single);
