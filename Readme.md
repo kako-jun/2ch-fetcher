@@ -31,7 +31,7 @@ async function hierarchal() {
 }
 
 async function single() {
-    const thread = new Thread("http://example.com/foobar/dat/123456789.dat", "title", 42);
+    const thread = new Thread("https://example.com/foobar/dat/123456789.dat", "title", 42);
     const posts = await thread.fetchPosts();
     console.log(posts.index(1));
 }

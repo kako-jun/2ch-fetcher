@@ -11,7 +11,7 @@ export class BBSMenu {
             if (categoryResult) category = categoryResult[1];
             const boardLinkResult = this.boardLinkRe.exec(line);
             if (boardLinkResult) {
-                boards.push(new Board(boardLinkResult[1], boardLinkResult[2], category));
+                boards.push(new Board(boardLinkResult[1].replace(/^http:/, "https:"), boardLinkResult[2], category));
             }
         }
 
@@ -23,7 +23,7 @@ export class BBSMenu {
 
     readonly url: string;
 
-    constructor(url = "http://2ch.sc/bbsmenu.html") {
+    constructor(url = "https://2ch.sc/bbsmenu.html") {
         this.url = url;
     }
 
